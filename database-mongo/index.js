@@ -11,9 +11,11 @@ db.once('open', function() {
   console.log('mongoose connected successfully');
 });
 
-var itemSchema = mongoose.Schema({
-  quantity: Number,
-  description: String
+var recipesSchema = mongoose.Schema({
+  name: String,
+  ingredients: String,
+  href: String;
+  thumbnail: String
 });
 
 var Item = mongoose.model('Item', itemSchema);
